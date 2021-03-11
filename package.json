@@ -1,0 +1,51 @@
+{
+    "name": "@webcomponents/webcomponent-template",
+    "version": "0.0.0",
+    "description": "",
+    "main": "dist/webcomponent.js",
+    "types": "dist/webcomponent.d.ts",
+    "directories": {
+        "doc": "doc",
+        "example": "example",
+        "test": "test"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@commitlint/cli": "11.0.0",
+        "@commitlint/config-conventional": "11.0.0",
+        "@fimbul/mithotyn": "0.21.0",
+        "@fimbul/wotan": "0.23.0",
+        "@semantic-release/commit-analyzer": "8.0.1",
+        "@semantic-release/git": "9.0.0",
+        "@semantic-release/release-notes-generator": "9.0.1",
+        "@types/finalhandler": "1.1.0",
+        "@types/node": "14.14.25",
+        "@types/serve-static": "1.13.9",
+        "aliv": "^1.13.0",
+        "c8": "7.5.0",
+        "concurrently": "^5.3.0",
+        "finalhandler": "1.1.2",
+        "git-hooks": "1.1.10",
+        "npm-check-updates": "11.1.1",
+        "onchange": "7.1.0",
+        "playwright-chromium": "1.8.1",
+        "semantic-release": "17.3.8",
+        "serve-static": "1.14.1",
+        "tap-mocha-reporter": "5.0.1",
+        "ts-node": "9.1.1",
+        "typedoc": "0.20.24",
+        "typescript": "4.1.5",
+        "zora": "4.0.2"
+    },
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/elency/webcomponent-template"
+    },
+    "files": [
+        "dist/*",
+        "@types/**/*"
+    ],
+    "author": "Anthony Pothin",
+    "license": "MIT"
+}

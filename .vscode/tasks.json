@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "autoClearConsole": true,
+    "tasks": [
+        {
+            "label": "unit test",
+            "type": "shell",
+            "command": "make unit-test",
+            "options": {
+                "shell": {
+                    "args": []
+                }
+            },
+            "problemMatcher": [
+                "$tsc"
+            ],
+        }
+    ]
+}

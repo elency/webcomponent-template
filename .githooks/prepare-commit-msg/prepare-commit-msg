@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# cat .git/COMMIT_EDITMSG
+npx commitlint -e -V -g
+
+# $? stores exit value of the last command
+if [ $? -ne 0 ]; then
+    echo -e "\e[0m\e[1m\e[31m\e[5m"
+    echo -e "🚨 \e[5m Your commit is not acceptable \e[25m🚨"
+    echo -e "\e[0m\e[1m\e[33m"
+    echo "You have to fix your commit message in order to commit."
+    echo -e "\e[0m"
+    exit 1
+fi
+
+
+

@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    // List of configurations. Add new configurations or edit existing ones.  
+    // ONLY "node" and "mono" are supported, change "type" to switch.
+    "configurations": [
+        {
+            "name": "run e2e test",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "env": {
+                "HEADFULL": "true"
+            },
+            "args": [
+                "${workspaceFolder}/test/end2end/webcomponent.spec.ts"
+            ]
+        }
+    ]
+}

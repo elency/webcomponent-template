@@ -1,0 +1,31 @@
+# Generated content
+build/
+dist/
+public/
+tmp/
+doc/
+screenshot/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Dependency directories
+node_modules
+
+# Cache
+.npm
+*.tsbuildinfo
+
+# Output of 'npm pack'
+*.tgz
+
+# Config
+.npmrc
+.env
+.env.test

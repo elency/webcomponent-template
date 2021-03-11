@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.base.json",
+    "files": [], // prevent include any files other than references
+    "references": [
+        {
+            "path": "./src/tsconfig.dist.json"
+        },
+        {
+            "path": "./src/tsconfig.build.json"
+        },
+        {
+            "path": "./test/end2end"
+        }
+    ]
+}

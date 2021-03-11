@@ -1,0 +1,39 @@
+name: release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-18.04
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      # Setup node by optionally downloading and caching it
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Setup npm to be able to download from and publish to a custom registry
+      - name: Setup npm
+        env:
+          CLOUDSMITH_API_KEY: ${{ secrets.CLOUDSMITH_API_KEY }}
+        run: |
+          npm config set "@webcomponent:registry" "https://npm.cloudsmith.io/elency/webcomponents/"
+          npm config set "//npm.cloudsmith.io/elency/webcomponents/:_authToken" "$CLOUDSMITH_API_KEY"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - run: make build
+
+      # send package to cloudsmith.io
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.CLOUDSMITH_API_KEY }}
+        run: npx semantic-release

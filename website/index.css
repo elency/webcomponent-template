@@ -1,0 +1,20 @@
+body {
+    font-size: 40px;
+}
+:focus {
+    background-color: blue;
+}
+
+webcomponent-template {
+    padding: 2px;
+    border-bottom: 1px solid blue;
+}
+webcomponent-template:valid {
+    background-color: green;
+}
+webcomponent-template:invalid {
+    background-color: red;
+}
+webcomponent-template:disabled {
+    background-color: grey;
+}

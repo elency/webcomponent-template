@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "triggerTaskOnSave.tasks": {
+        "unit test": [
+            "src/**/*.ts",
+            "unit/**/*.ts"
+        ],
+    },
+    "cSpell.words": [
+        "zora"
+    ]
+}

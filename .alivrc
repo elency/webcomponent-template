@@ -1,0 +1,13 @@
+{
+    "port": 9999,
+    "quiet": true,
+    "pathIndex": "demo/",
+    "only": [
+        "demo/**/*",
+        "dist/**/*"
+    ],
+    "static": [
+        "demo/**/*",
+        "dist/**/*"
+    ]
+}

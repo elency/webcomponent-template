@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+make unit-test
+
+# $? stores exit value of the last command
+if [ $? -ne 0 ]; then
+    echo -e "\e[0m\e[1m\e[31m\e[5m"
+    echo -e "🚧 \e[5m Your unit tests are failing \e[25m🚧"
+    echo -e "\e[0m\e[1m\e[33m"
+    echo "You should check them before to merge."
+    echo -e "\e[0m"
+fi
